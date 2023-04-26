@@ -28,22 +28,22 @@ print(json.dumps(req.json(), sort_keys=True, indent=4))
 
 AUTHTOKEN = req.json()["result"]
 
-data ={
-        "jsonrpc": "2.0",
-        "method": "host.get",
-        "params": {
-            "output": [
-                "hostid",
-                "host"
-            ],
-            "selectInterfaces": [
-                "interfaceid",
-                "ip"
-            ]
-        },
-        "id": 2,
-        "auth": AUTHTOKEN
-    }
+# data ={
+#         "jsonrpc": "2.0",
+#         "method": "host.get",
+#         "params": {
+#             "output": [
+#                 "hostid",
+#                 "host"
+#             ],
+#             "selectInterfaces": [
+#                 "interfaceid",
+#                 "ip"
+#             ]
+#         },
+#         "id": 2,
+#         "auth": AUTHTOKEN
+#     }
 
 
 # data = {
@@ -78,6 +78,24 @@ data ={
 #     "auth": AUTHTOKEN
 # }
 
+
+
+data = {
+    "jsonrpc": "2.0",
+    "method": "map.get",
+    "params": {
+        "output": "extend",
+        "selectSelements": "extend",
+        "selectLinks": "extend",
+        "selectUsers": "extend",
+        "selectUserGroups": "extend",
+        "selectShapes": "extend",
+        "selectLines": "extend",
+        #"sysmapids": "3"
+    },
+    "id": 2,
+    "auth": AUTHTOKEN
+}
 # Retrieve a list of problems
 print("\nGet hosts")
 req = requests.post(ZABBIX_API_URL, json = data , verify=False)

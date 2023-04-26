@@ -14,6 +14,7 @@ now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
 today = date.today()
 description = f"Host was added via ANSIBLE on {today} at {current_time}"
+
 host_name = "vois2"
 ip_addr = "10.81.0.235"
 platform = "cisco_ios"
