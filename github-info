@@ -8,7 +8,9 @@ git commit -m "create ansible repo"
 git branch -M master
 git remote add origin git@github.com:sjstanev/ansible.git
 git push -u origin master
+
 …or push an existing repository from the command line
+
 git remote add origin https://github.com/sjstanev/anisble.git
 git branch -M main
 git push -u origin main
