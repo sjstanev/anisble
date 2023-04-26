@@ -2,6 +2,9 @@ Get started by creating a new file or uploading an existing file. We recommend e
 
 …or create a new repository on the command line
 echo "# anisble" >> README.md
+
+create .gitignore file and put all fildor and files that do not need to be synced
+
 git init
 git add README.md
 git commit -m "create ansible repo"

@@ -1,0 +1,3 @@
+create a new user and a new user group with read only permissions, and no access to the front end, specific for when calling the API.
+!
+
