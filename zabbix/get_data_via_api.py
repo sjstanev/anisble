@@ -28,38 +28,55 @@ print(json.dumps(req.json(), sort_keys=True, indent=4))
 
 AUTHTOKEN = req.json()["result"]
 
-# data ={
-#         "jsonrpc": "2.0",
-#         "method": "host.get",
-#         "params": {
-#             "output": [
-#                 "hostid",
-#                 "host"
-#             ],
-#             "selectInterfaces": [
-#                 "interfaceid",
-#                 "ip"
-#             ]
-#         },
-#         "id": 2,
-#         "auth": AUTHTOKEN
-#     }
-
-
-data = {
-    "jsonrpc": "2.0",
-    "method": "template.get",
-    "params": {
-        "output": "extend",
-        "filter": {
-            "host": [
-                "Linux by Zabbix agent",
+data ={
+        "jsonrpc": "2.0",
+        "method": "host.get",
+        "params": {
+            "output": [
+                "hostid",
+                "host"
+            ],
+            "selectInterfaces": [
+                "interfaceid",
+                "ip"
             ]
-        }
-    },
-    "id": 2,
-    "auth": AUTHTOKEN
-}
+        },
+        "id": 2,
+        "auth": AUTHTOKEN
+    }
+
+
+# data = {
+#     "jsonrpc": "2.0",
+#     "method": "template.get",
+#     "params": {
+#         "output": "extend",
+#         "filter": {
+#             "host": [
+#                 "Linux by Zabbix agent",
+#                 "Cisco IOS by SNMP"
+#             ]
+#         }
+#     },
+#     "id": 2,
+#     "auth": AUTHTOKEN
+# }
+
+
+# data = {
+#     "jsonrpc": "2.0",
+#     "method": "hostgroup.get",
+#     "params": {
+#         "output": "extend",
+#         "filter": {
+#             "name": [
+#                 "Cisco Switches"
+#             ]
+#         }
+#     },
+#     "id": 2,
+#     "auth": AUTHTOKEN
+# }
 
 # Retrieve a list of problems
 print("\nGet hosts")
