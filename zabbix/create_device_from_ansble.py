@@ -36,7 +36,7 @@ first_ip = result["ansible_facts"]["ansible_net_all_ipv4_addresses"][1]
 platform = "cisco"
 
 # Create device using ansible results
-# user_login = ll.create_devic_via_ansible(hostname, first_ip, platform)
+user_login = ll.create_devic_via_ansible(hostname, first_ip, platform)
 
 print("-" * 80)
 
