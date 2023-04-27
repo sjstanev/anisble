@@ -35,3 +35,14 @@ git config --global user.email "sstanev@vtechnology.eu"
 git diff
 git add .
 git push origin main
+
+-----------------------------------------------------------
+sync-gitignore
+# rm all files
+git rm -r --cached .
+# add all files as per new .gitignore
+git add .
+# now, commit for new .gitignore to apply
+git commit -m ".gitignore is now working"
+
+Ref> https://stackoverflow.com/questions/7075923/resync-git-repo-with-new-gitignore-file
