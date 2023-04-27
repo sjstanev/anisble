@@ -26,19 +26,23 @@ PASSWORD = "zabbix"
 
 # Login user
 # print("\nLogin user")
-req = requests.post(ZABBIX_API_URL,
-                json = {
-                    "jsonrpc": "2.0",
-                    "method": "user.login",
-                    "params": {
-                            "username": USERNAME,
-                            "password": PASSWORD
-                    }, "id": 2,
-                }, verify=False)
+def user_loging(ZABBIX_API_URL,USERNAME,PASSWORD):
+    req = requests.post(ZABBIX_API_URL,
+                    json = {
+                        "jsonrpc": "2.0",
+                        "method": "user.login",
+                        "params": {
+                                "username": USERNAME,
+                                "password": PASSWORD
+                        }, "id": 2,
+                    }, verify=False)
+    return req
 
 # print(json.dumps(req.json(), sort_keys=True, indent=4))
 
-AUTHTOKEN = req.json()["result"]
+user_loging = user_loging(ZABBIX_API_URL,USERNAME,PASSWORD)
+
+AUTHTOKEN = user_loging.json()["result"]
 
 data ={
     "jsonrpc": "2.0",

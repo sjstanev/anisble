@@ -25,9 +25,9 @@
 
       - name: VIEW MULTIPLE COMMANDS OUTPUTS
         debug:
-          var: output['stdout'][1]
+          var: output['stdout'][0]
 
       - name: STORE DATA IN A FILE
         copy:
-          content: "{{ output['stdout'][1] }}"
+          content: "{{ output['stdout'][0] }}"
           dest: ./outputs/{{ inventory_hostname }}.txt
