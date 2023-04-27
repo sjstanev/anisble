@@ -4,3 +4,6 @@
 # gitigore file
 .gitignore
 
+.ssh
+.bash_hostory
+
