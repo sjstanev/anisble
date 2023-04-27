@@ -14,7 +14,7 @@ ssh-keygen -t ed25519 -C "type some comment
 # -rw------- 1 sstanev sstanev   419 мар 22 21:45 ansible
 # -rw-r--r-- 1 sstanev sstanev   104 мар 22 21:45 ansible.pub
 #
-#
+# comment
 
 
 # if you want dedicated key for specific reason use:
