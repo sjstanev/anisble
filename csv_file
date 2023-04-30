@@ -1,7 +1,7 @@
-local_interface,neighbour,platform,port
-GigabitEthernet0/3,RB931-2nD,MikroTik,Bridge-VxLAN-VNI-81/VxLAN-VNI
-GigabitEthernet0/3,RB4011iGS,MikroTik,Bridge-VxLAN-VNI-81/LAB02-INF
-GigabitEthernet0/3,vios-2.vtechnology.eu,Cisco ,GigabitEthernet0/2
-GigabitEthernet0/3,vios-3.vtechnology.eu,Cisco ,GigabitEthernet0/1
-GigabitEthernet0/0,vios-2.vtechnology.eu,Cisco ,GigabitEthernet0/1
-GigabitEthernet0/1,vios-3.vtechnology.eu,Cisco ,GigabitEthernet0/0
+local_interface,neighbour,platform,port,dummy_device
+GigabitEthernet0/3,RB931-2nD,MikroTik,Bridge-VxLAN-VNI-81/VxLAN-VNI,yes
+GigabitEthernet0/3,RB4011iGS,MikroTik,Bridge-VxLAN-VNI-81/LAB02-INF,yes
+GigabitEthernet0/3,vios-2.vtechnology.eu,Cisco ,GigabitEthernet0/2,yes
+GigabitEthernet0/3,vios-3.vtechnology.eu,Cisco ,GigabitEthernet0/1,yes
+GigabitEthernet0/0,vios-2.vtechnology.eu,Cisco ,GigabitEthernet0/1,no
+GigabitEthernet0/1,vios-3.vtechnology.eu,Cisco ,GigabitEthernet0/0,no

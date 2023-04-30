@@ -4,7 +4,7 @@ neighbours_list = []
 
 def network_neigbours(network_neighbours):
     # create headers
-    header = ['local_interface','neighbour', 'platform', 'port']
+    header = ['local_interface','neighbour', 'platform', 'port', 'dummy_device']
 
     # open the file in the write mode
     with open('csv_file', 'w')as f:
@@ -20,19 +20,21 @@ def network_neigbours(network_neighbours):
             if count_neighbours > 1:
                 print (f'The neighbour on interface {int} is a dummy device')
                 print(f'\nOn interface {int} there {count_neighbours} neighbour(s).')
+                dummy_device = 'yes'
             else:
                 print(f'\nOn interface {int} there {count_neighbours} neighbour(s).')
+                dummy_device = 'no'
 
             for neihbour in neihbours:
 
                 # print result in csv format
-                print (f'interface {int} : neighbour { neihbour["host"] }, platform: {neihbour["platform"]}, port {neihbour["port"]}')
+                print (f'interface {int} : neighbour { neihbour["host"] }, platform: {neihbour["platform"]}, port {neihbour["port"]},"dummy_device": {dummy_device}')
 
                 # create csv file
-                writer.writerow([int, neihbour["host"], neihbour["platform"], neihbour["port"]])
+                writer.writerow([int, neihbour["host"], neihbour["platform"], neihbour["port"], dummy_device])
 
                 # create a dictionary with whole information
-                neighbours_list.append({"local_interface":int, "neighbour": neihbour["host"], "platform": neihbour["platform"], "port": neihbour["port"]})
+                neighbours_list.append({"local_interface":int, "neighbour": neihbour["host"], "platform": neihbour["platform"], "port": neihbour["port"], "dummy_device": dummy_device })
         
         print("-" * 80)
     return neighbours_list
