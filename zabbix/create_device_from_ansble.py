@@ -20,6 +20,7 @@ all data is received via ansible script
 def create_single_device(result):
     # create hostname var
     hostname = result["ansible_facts"]["ansible_net_hostname"]
+    first_device_hostname = hostname
 
     # create ip_addr var
     if len(result["ansible_facts"]["ansible_net_all_ipv4_addresses"]) > 1:
@@ -38,7 +39,9 @@ def create_single_device(result):
         # Create device using ansible results
         mcd.create_single_devic_via_ansible(hostname, ip_addr, platform)
     else:
-        print(f'The {hostname} is already added to zabbix!')    
+        print(f'The {hostname} is already added to zabbix!')
+
+    return(first_device_hostname) 
 
 
 
@@ -92,12 +95,15 @@ net_neighbors = result["ansible_facts"]["ansible_net_neighbors"]
 
 # Create list with number of neighbour on every interface
 neighbours_list = mcln.network_neigbours(net_neighbors)
+# for n in neighbours_list:
+#     print(n)
 
 # Gather information whether this device already exist in Zabbix
 zabbix_hosts = mgh.get_host_via_api()
 
 # Create first device in zabbix -- local def
-create_single_device(result)
+first_device_hostname = create_single_device(result)
+#print(first_device_hostname)
 
 # Create other devices in zabbix -- local def
 create_multiple_host(neighbours_list,zabbix_hosts)
