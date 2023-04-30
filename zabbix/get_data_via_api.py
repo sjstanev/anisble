@@ -47,55 +47,57 @@ AUTHTOKEN = req.json()["result"]
 
 
 # data = {
-#     "jsonrpc": "2.0",
-#     "method": "template.get",
-#     "params": {
-#         "output": "extend",
-#         "filter": {
-#             "host": [
-#                 "Linux by Zabbix agent",
-#                 "Cisco IOS by SNMP"
-#             ]
-#         }
-#     },
-#     "id": 2,
-#     "auth": AUTHTOKEN
+#      "jsonrpc": "2.0",
+#      "method": "template.get",
+#      "params": {
+#          "output": "extend",
+#          "filter": {
+#              "host": [
+#                  "Linux by Zabbix agent",
+#                  "Cisco IOS by SNMP",
+#                   "Mikrotik by SNMP"
+#              ]
+#          }
+#      },
+#      "id": 2,
+#      "auth": AUTHTOKEN
 # }
-
-
-# data = {
-#     "jsonrpc": "2.0",
-#     "method": "hostgroup.get",
-#     "params": {
-#         "output": "extend",
-#         "filter": {
-#             "name": [
-#                 "Cisco Switches"
-#             ]
-#         }
-#     },
-#     "id": 2,
-#     "auth": AUTHTOKEN
-# }
-
 
 
 data = {
     "jsonrpc": "2.0",
-    "method": "map.get",
+    "method": "hostgroup.get",
     "params": {
         "output": "extend",
-        "selectSelements": "extend",
-        "selectLinks": "extend",
-        "selectUsers": "extend",
-        "selectUserGroups": "extend",
-        "selectShapes": "extend",
-        "selectLines": "extend",
-        #"sysmapids": "3"
+        "filter": {
+            "name": [
+                "Cisco Switches",
+                "Mikrotik"
+            ]
+        }
     },
     "id": 2,
     "auth": AUTHTOKEN
 }
+
+
+
+# data = {
+#     "jsonrpc": "2.0",
+#     "method": "map.get",
+#     "params": {
+#         "output": "extend",
+#         "selectSelements": "extend",
+#         "selectLinks": "extend",
+#         "selectUsers": "extend",
+#         "selectUserGroups": "extend",
+#         "selectShapes": "extend",
+#         "selectLines": "extend",
+#         #"sysmapids": "3"
+#     },
+#     "id": 2,
+#     "auth": AUTHTOKEN
+# }
 # Retrieve a list of problems
 print("\nGet hosts")
 req = requests.post(ZABBIX_API_URL, json = data , verify=False)
