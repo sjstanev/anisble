@@ -64,3 +64,23 @@ ps aux | grep 2362
 ssh-add # than type passphrase
 
 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!! config file for less secure KexAlgorithms diffie-hellman-group-exchange-sha1 and HostkeyAlgorithms +ssh-rsa !!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Host 10.81.0.234
+    User admin
+    KexAlgorithms diffie-hellman-group-exchange-sha1
+    HostkeyAlgorithms +ssh-rsa
+    TCPKeepAlive no
+    ServerAliveInterval 300
+    ServerAliveCountMax 100
+
+Host 10.81.0.235
+    User admin
+    KexAlgorithms diffie-hellman-group-exchange-sha1
+    HostkeyAlgorithms +ssh-rsa
+    TCPKeepAlive no
+    ServerAliveInterval 300
+    ServerAliveCountMax 100
