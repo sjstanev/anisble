@@ -1,0 +1,5 @@
+.vscode/
+*pdf
+pictures/
+.venv/
+inventory
