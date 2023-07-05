@@ -1,11 +1,9 @@
 [lab01hosts]
 10.30.4.116
-10.30.4.115
-10.30.4.112
 
 [all:vars]
 ansible_ssh_pass=cisco
-ansible_user=admin
+ansible_user=admsjstanev
 ansible_network_os=ios
 
 
