@@ -3,7 +3,7 @@
 
 [all:vars]
 ansible_ssh_pass=cisco
-ansible_user=admsjstanev
+ansible_user=sjstanev
 ansible_network_os=ios
 
 
