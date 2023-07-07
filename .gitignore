@@ -1,0 +1,6 @@
+.vscode/
+*pdf
+pictures/
+.venv/
+home/
+gather_facts/inventory
