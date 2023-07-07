@@ -1,7 +1,0 @@
---------------------------------------------------------------------------------
-[{'local_interface': {'GigabitEthernet0/3'}, 'neighbour': {'RB931-2nD'}, 'platform': {'MikroTik'}, 'port': {'Bridge-VxLAN-VNI-81/VxLAN-VNI'}}, 
-{'local_interface': {'GigabitEthernet0/3'}, 'neighbour': {'RB4011iGS'}, 'platform': {'MikroTik'}, 'port': {'Bridge-VxLAN-VNI-81/LAB02-INF'}}, 
-{'local_interface': {'GigabitEthernet0/3'}, 'neighbour': {'vios-2.vtechnology.eu'}, 'platform': {'Cisco '}, 'port': {'GigabitEthernet0/2'}}, 
-{'local_interface': {'GigabitEthernet0/3'}, 'neighbour': {'vios-3.vtechnology.eu'}, 'platform': {'Cisco '}, 'port': {'GigabitEthernet0/1'}}, 
-'local_interface': {'GigabitEthernet0/0'}, 'neighbour': {'vios-2.vtechnology.eu'}, 'platform': {'Cisco '}, 'port': {'GigabitEthernet0/1'}}, 
-{'local_interface': {'GigabitEthernet0/1'}, 'neighbour': {'vios-3.vtechnology.eu'}, 'platform': {'Cisco '}, 'port': {'GigabitEthernet0/0'}}]
