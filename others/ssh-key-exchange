@@ -1,5 +1,5 @@
 # generate keys 
-ssh-keygen -t ed25519 -C "type some comment
+ssh-keygen -t ed25519 -C "write some comment"
 
 # passphrase: ( you can leave empty or type some one)
 
